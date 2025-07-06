@@ -1,1 +1,146 @@
+/* -- Google Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* -- Variable  Settings */
+/* -- Resetting Settings */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/* -- Typography Settings */
+body {
+  font-family: "Inter", sans-serif;
+  color: #050505;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.main-grid {
+  background-color: #e7e7e9;
+  display: grid;
+  grid-template-rows: 15vh max-content max-content;
+  /*grid-template-columns:
+    [full-start] minmax(3rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr)
+    [full-end]; */
+  grid-template-columns: [full-start] 10vw [center-start] 80vw [center-end] 10vw [full-end];
+}
+
+.header {
+  grid-row: 1/-1;
+  grid-column: center-start/center-end;
+}
+
+.main-container {
+  grid-row: 2/-1;
+  grid-column: full-start/full-end;
+}
+
+.footer {
+  grid-row: 3/-1;
+  grid-column: full-start/full-end;
+}
+
+.header {
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__picture {
+  height: 4rem;
+}
+
+.main-container {
+  display: grid;
+  grid-template-rows: 100vh auto;
+  grid-template-columns: [full-start] 10vw [center-start] 80vw [center-end] 10vw [full-end];
+}
+
+.hero {
+  grid-row: 1/-1;
+  grid-column: center-start/center-end;
+  background-image: url(../assets/img/Img-123.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10rem;
+  position: relative;
+}
+.hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+  backdrop-filter: blur(5px);
+  padding: 10rem;
+  border-radius: 6rem;
+}
+.hero__content h1 {
+  font-size: 9.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.hero__content em {
+  font-weight: 100;
+}
+
+.refresh {
+  grid-column: center-start/center-end;
+}
+
+.cleaners {
+  grid-column: center-start/center-end;
+}
+
+.ratings {
+  grid-column: full-start/full-end;
+}
+
+.efficient {
+  grid-column: full-start/full-end;
+}
+
+.team {
+  grid-column: center-start/center-end;
+}
+
+.post {
+  grid-column: center-start/center-end;
+}
+
+.faq {
+  grid-column: center-start/center-end;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+}
+.nav__item {
+  padding-right: 5rem;
+}
+.nav__link {
+  color: #050505;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */

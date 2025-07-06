@@ -1,3 +1,4 @@
+@use "variables" as *;
 /* -- Resetting Settings */
 *,
 *::before,
@@ -6,12 +7,15 @@
   padding: 0;
   box-sizing: inherit;
 }
-
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1 rem = 10px
 }
 
-/* -- Variable  Settings */
-
 /* -- Typography Settings */
+body {
+  font-family: $font;
+  color: $font-color;
+  font-weight: 300;
+  line-height: 1.6;
+}
